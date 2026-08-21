@@ -47,7 +47,6 @@ $type = [Type]::GetTypeFromCLSID("{854A20FB-2D44-457D-992F-EF13785D2B51}")
 $object = [Activator]::CreateInstance($type)
 ```
 
-
 ### References
 
 - _(none)_

@@ -1,4 +1,4 @@
 ```
-7680/tcp open  pando-pub? 
+7680/tcp open pando-pub?
 ```
 

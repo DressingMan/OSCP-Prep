@@ -1,111 +1,6 @@
 ## NMAP 
 
 ```
-# Nmap 7.94SVN scan initiated Mon Jun 24 23:04:21 2024 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
-Nmap scan report for TARGET
-Host is up, received user-set (0.074s latency).
-Scanned at 2024-06-24 23:04:23 EDT for 205s
-
-Bug in http-security-headers: no string output.
-PORT   STATE SERVICE REASON          VERSION
-80/tcp open  http    syn-ack ttl 125 Microsoft IIS httpd 10.0
-|_http-malware-host: Host appears to be clean
-|_http-feed: Couldn't find any feeds.
-|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
-| http-headers: 
-|   Content-Length: 696
-|   Content-Type: text/html
-|   Last-Modified: Thu, 30 Apr 2020 05:29:47 GMT
-|   Accept-Ranges: bytes
-|   ETag: "c692185db01ed61:0"
-|   Server: Microsoft-IIS/10.0
-|   X-Powered-By: ASP.NET
-|   Date: Tue, 25 Jun 2024 03:04:30 GMT
-|   Connection: close
-|   
-|_  (Request type: HEAD)
-|_http-mobileversion-checker: No mobile version detected.
-|_http-title: IIS Windows
-|_http-referer-checker: Couldn't find any cross-domain scripts.
-| http-methods: 
-|   Supported Methods: OPTIONS TRACE GET HEAD POST
-|_  Potentially risky methods: TRACE
-|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
-|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
-| http-php-version: Logo query returned unknown hash f830d1e83d70eddcf08c5e3704237af0
-|_Credits query returned unknown hash f830d1e83d70eddcf08c5e3704237af0
-|_http-dombased-xss: Couldn't find any DOM based XSS.
-|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
-|_http-errors: Couldn't find any error pages.
-| http-useragent-tester: 
-|   Status for browser useragent: 200
-|   Allowed User Agents: 
-|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
-|     libwww
-|     lwp-trivial
-|     libcurl-agent/1.0
-|     PHP/
-|     Python-urllib/2.5
-|     GT::WWW
-|     Snoopy
-|     MFC_Tear_Sample
-|     HTTP::Lite
-|     PHPCrawl
-|     URI::Fetch
-|     Zend_Http_Client
-|     http client
-|     PECL::HTTP
-|     Wget/1.13.4 (linux-gnu)
-|_    WWW-Mechanize/1.34
-|_http-date: Tue, 25 Jun 2024 03:04:31 GMT; -1s from local time.
-| http-comments-displayer: 
-| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=TARGET
-|     
-|     Path: http://TARGET:80/
-|     Line number: 7
-|     Comment: 
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|         
-|_        -->
-| http-sitemap-generator: 
-|   Directory structure:
-|     /
-|       Other: 1; png: 1
-|   Longest directory structure:
-|     Depth: 0
-|     Dir: /
-|   Total files found (by extension):
-|_    Other: 1; png: 1
-|_http-csrf: Couldn't find any CSRF vulnerabilities.
-|_http-fetch: Please enter the complete path of the directory to save data in.
-|_http-server-header: Microsoft-IIS/10.0
-| http-vhosts: 
-|_128 names had status 200
-|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
-|_http-devframework: ASP.NET detected. Found related header.
-|_http-jsonp-detection: Couldn't find any JSONP endpoints.
-|_http-chrono: Request times for /; avg: 231.96ms; min: 219.91ms; max: 258.65ms
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Jun 24 23:07:48 2024 -- 1 IP address (1 host up) scanned in 206.96 seconds
-
 ```
 
 ## CURL 
@@ -244,8 +139,6 @@ HTTP Headers:
 	Date: Tue, 25 Jun 2024 03:04:26 GMT
 	Connection: close
 	Content-Length: 603
-
-
 
 ```
 ## Screenshot 

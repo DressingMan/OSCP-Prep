@@ -1,76 +1,17 @@
 ## NMAP 
 ```bash
-# Nmap 7.94SVN scan initiated Thu Oct 17 16:42:24 2024 as: nmap -vv --reason -Pn -T4 -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Thu Oct 17 16:42:24 2024 as: nmap -vv --reason -Pn -T4 -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.056s latency).
 Scanned at 2024-10-17 16:42:24 EDT for 3s
-
-PORT   STATE SERVICE REASON         VERSION
-22/tcp open  ssh     syn-ack ttl 61 OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
-|_banner: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2
-| ssh2-enum-algos: 
-|   kex_algorithms: (10)
-|       curve25519-sha256
-|       curve25519-sha256@libssh.org
-|       ecdh-sha2-nistp256
-|       ecdh-sha2-nistp384
-|       ecdh-sha2-nistp521
-|       diffie-hellman-group-exchange-sha256
-|       diffie-hellman-group16-sha512
-|       diffie-hellman-group18-sha512
-|       diffie-hellman-group14-sha256
-|       diffie-hellman-group14-sha1
-|   server_host_key_algorithms: (5)
-|       rsa-sha2-512
-|       rsa-sha2-256
-|       ssh-rsa
-|       ecdsa-sha2-nistp256
-|       ssh-ed25519
-|   encryption_algorithms: (6)
-|       chacha20-poly1305@openssh.com
-|       aes128-ctr
-|       aes192-ctr
-|       aes256-ctr
-|       aes128-gcm@openssh.com
-|       aes256-gcm@openssh.com
-|   mac_algorithms: (10)
-|       umac-64-etm@openssh.com
-|       umac-128-etm@openssh.com
-|       hmac-sha2-256-etm@openssh.com
-|       hmac-sha2-512-etm@openssh.com
-|       hmac-sha1-etm@openssh.com
-|       umac-64@openssh.com
-|       umac-128@openssh.com
-|       hmac-sha2-256
-|       hmac-sha2-512
-|       hmac-sha1
-|   compression_algorithms: (2)
-|       none
-|_      zlib@openssh.com
-| ssh-hostkey: 
-|   2048 a8:e1:60:68:be:f5:8e:70:70:54:b4:27:ee:9a:7e:7f (RSA)
-| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDssyyACw3AHaTatHhBU1VyBRbKOirrDG8M9IjpJPTf/v8mdIqiXk1HsBdoFZcsmWJVV4OXC7GMcHa+s0tZceTmgGf5TpiCB2yXUYPZre183LjJWM6KQMZVI0LHz9Yd3ji2bdD5jjtVxwnjrdx8GlU1THMGbzZivfSsPF18arMIq3ukYBS09Ov1SIKR4DJ7pjtBRutRBZKI/8/H+uB2u47AQRwbWuVaOmtZyDrfvgL/IqAFRQrbeP1VNQAErzHl8wNuk1vR+yROv0j7smTqoqqc8aB751O63gtBdCvKzpigwFDLyxYuzu8dW1Hh6ZQzaQZgWkw6SZeExAijK7yXSU61
-|   256 bb:99:9a:45:3f:35:0b:b3:49:e6:cf:11:49:87:8d:94 (ECDSA)
-| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNUPmkVV/Q+iD07j1sFmdFWp7yppofTTgfzAhvMkyGPulIdMDbzFgW/pRAq3R3zZV7aEcWAMfFHgdXfj3W4FUuc=
-|   256 f2:eb:fc:45:d7:e9:80:77:66:a3:93:53:de:00:57:9c (ED25519)
-|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIPO1eLYoJ0AhVJ5NIDfaSrfUis34Bw5bKMMdFWzHPx0
-| ssh-auth-methods: 
-|   Supported authentication methods: 
-|     publickey
-|_    password
+PORT      STATE SERVICE        VERSION
+22/tcp open ssh OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Thu Oct 17 16:42:27 2024 -- 1 IP address (1 host up) scanned in 2.46 seconds
-
-
 ```
-
 
 ## SSH-AUDIT
 
 ```bash
-
 
 ```

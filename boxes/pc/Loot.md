@@ -5,7 +5,6 @@ root:x:0:0:root:/root:/bin/bash
 user:x:1000:1000:,,,:/home/user:/bin/bash
 ```
 
-
 ## Passwords:
 ```
 

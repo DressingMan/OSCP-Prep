@@ -2,115 +2,17 @@
 ## NMAP
 
 ```bash
-# Nmap 7.94SVN scan initiated Thu Oct 17 16:42:24 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Thu Oct 17 16:42:24 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.062s latency).
 Scanned at 2024-10-17 16:42:24 EDT for 351s
-
-PORT    STATE SERVICE     REASON         VERSION
-139/tcp open  netbios-ssn syn-ack ttl 61 Samba smbd 4.9.5-Debian (workgroup: WORKGROUP)
+PORT      STATE SERVICE        VERSION
+139/tcp open netbios-ssn Samba smbd 4.9.5-Debian (workgroup: WORKGROUP)
 Service Info: Host: PELICAN
-
 Host script results:
-| smb-mbenum: 
-|   DFS Root
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Potential Browser
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Print server
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Server
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Server service
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Unix server
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Windows NT/2000/XP/2003 server
-|     PELICAN  0.0  Samba 4.9.5-Debian
-|   Workstation
-|_    PELICAN  0.0  Samba 4.9.5-Debian
-| smb-enum-sessions: 
-|_  <nobody>
-| smb2-capabilities: 
-|   2:0:2: 
-|     Distributed File System
-|   2:1:0: 
-|     Distributed File System
-|     Leasing
-|   3:0:0: 
-|     Distributed File System
-|     Leasing
-|   3:0:2: 
-|     Distributed File System
-|     Leasing
-|   3:1:1: 
-|     Distributed File System
-|_    Leasing
-|_smb-vuln-ms10-061: false
-| smb2-security-mode: 
-|   3:1:1: 
+| smb2-security-mode:
 |_    Message signing enabled but not required
-|_smb-print-text: false
-| smb-os-discovery: 
-|   OS: Windows 6.1 (Samba 4.9.5-Debian)
-|   Computer name: pelican
-|   NetBIOS computer name: PELICAN\x00
-|   Domain name: \x00
-|   FQDN: pelican
-|_  System time: 2024-10-17T16:42:51-04:00
-| smb-security-mode: 
-|   account_used: guest
-|   authentication_level: user
-|   challenge_response: supported
-|_  message_signing: disabled (dangerous, but default)
-|_smb-system-info: ERROR: Script execution failed (use -d to debug)
-| smb-enum-shares: 
-|   account_used: guest
-|   \\TARGET\IPC$: 
-|     Type: STYPE_IPC_HIDDEN
-|     Comment: IPC Service (Samba 4.9.5-Debian)
-|     Users: 3
-|     Max Users: <unlimited>
-|     Path: C:\tmp
-|     Anonymous access: READ/WRITE
-|     Current user access: READ/WRITE
-|   \\TARGET\print$: 
-|     Type: STYPE_DISKTREE
-|     Comment: Printer Drivers
-|     Users: 0
-|     Max Users: <unlimited>
-|     Path: C:\var\lib\samba\printers
-|     Anonymous access: <none>
-|_    Current user access: <none>
-| smb2-time: 
-|   date: 2024-10-17T20:42:54
-|_  start_date: N/A
-| smb-enum-domains: 
-|   Builtin
-|     Groups: n/a
-|     Users: n/a
-|     Creation time: unknown
-|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
-|     Account lockout disabled
-|   PELICAN
-|     Groups: n/a
-|     Users: n/a
-|     Creation time: unknown
-|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
-|_    Account lockout disabled
-| smb-protocols: 
-|   dialects: 
-|     NT LM 0.12 (SMBv1) [dangerous, but default]
-|     2:0:2
-|     2:1:0
-|     3:0:0
-|     3:0:2
-|_    3:1:1
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Thu Oct 17 16:48:15 2024 -- 1 IP address (1 host up) scanned in 350.54 seconds
-
 ```
 ## Enum4linux 
 
@@ -125,13 +27,9 @@ Username ......... ''
 Password ......... ''
 Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
 
-
  ===========================( Enumerating Workgroup/Domain on TARGET )===========================
 
-
 [E] Can't find workgroup/domain
-
-
 
  ===============================( Nbtstat Information for TARGET )===============================
 
@@ -140,9 +38,7 @@ No reply from TARGET
 
  ==================================( Session Check on TARGET )==================================
 
-
 [+] Server TARGET allows sessions using username '', password ''
-
 
  ===============================( Getting domain SID for TARGET )===============================
 
@@ -151,12 +47,9 @@ Domain Sid: (NULL SID)
 
 [+] Can't determine if host is part of domain or part of a workgroup
 
-
  ==================================( OS information on TARGET )==================================
 
-
 [E] Can't get OS info with smbclient
-
 
 [+] Got OS info for TARGET from srvinfo: 
 	PELICAN        Wk Sv PrQ Unx NT SNT Samba 4.9.5-Debian
@@ -164,13 +57,9 @@ Domain Sid: (NULL SID)
 	os version      :	6.1
 	server type     :	0x809a03
 
-
  ======================================( Users on TARGET )======================================
 
-
-
  ================================( Share Enumeration on TARGET )================================
-
 
 	Sharename       Type      Comment
 	---------       ----      -------
@@ -195,8 +84,6 @@ NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
 //TARGET/IPC$	Mapping: N/A Listing: N/A Writing: N/A
 
  ===========================( Password Policy Information for TARGET )===========================
-
-
 
 [+] Attaching to TARGET using a NULL share
 
@@ -227,38 +114,26 @@ NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
 	[+] Account Lockout Threshold: None
 	[+] Forced Log off Time: 37 days 6 hours 21 minutes 
 
-
-
 [+] Retieved partial password policy with rpcclient:
-
 
 Password Complexity: Disabled
 Minimum Password Length: 5
 
-
  ======================================( Groups on TARGET )======================================
-
 
 [+] Getting builtin groups:
 
-
 [+]  Getting builtin group memberships:
-
 
 [+]  Getting local groups:
 
-
 [+]  Getting local group memberships:
-
 
 [+]  Getting domain groups:
 
-
 [+]  Getting domain group memberships:
 
-
  =================( Users on TARGET via RID cycling (RIDS: 500-550,1000-1050) )=================
-
 
 [I] Found new SID: 
 S-1-22-1
@@ -298,9 +173,7 @@ S-1-5-32-550 BUILTIN\Print Operators (Local Group)
 
 No printers returned.
 
-
 enum4linux complete on Thu Oct 17 17:06:21 2024
-
 
 ```
 ## Enum4linux-ng
@@ -473,14 +346,11 @@ Domain logoff information:
 
 Completed after 18.60 seconds
 
-
 ```
 ## nbtscan 
 
 ```bash
 Doing NBT name scan for addresses from TARGET
-
-
 
 ```
 
@@ -500,7 +370,6 @@ Reconnecting with SMB1 for workgroup listing.
 	Workgroup            Master
 	---------            -------
 	WORKGROUP
-
 
 ```
 

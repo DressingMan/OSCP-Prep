@@ -52,7 +52,6 @@ call the payload with a listener ->
 C:\inetpub\wwwroot\reverse.exe
 ```
 
-
 Prive Esc ->
 
 After going through the system we do see that LAPS has been installed on the server.
@@ -71,5 +70,4 @@ We can see for the domain controller the LAPS password set is `J6QOuU+lhs[SH/` I
 I was then able to use these credentials with Impacket's psexec.py to gain access to the Domain Controller as SYSTEM.
 
 ![Pasted image 20240325191353.png](Evidence/Pasted%20image%2020240325191353.png)
-
 

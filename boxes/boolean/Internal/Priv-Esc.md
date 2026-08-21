@@ -1,7 +1,6 @@
 
 ![Pasted image 20240716174804.png](Evidence/Pasted%20image%2020240716174804.png)
 
-
 discovered a root private key in remis .ssh folder 
 
 ![Pasted image 20240716180648.png](Evidence/Pasted%20image%2020240716180648.png)

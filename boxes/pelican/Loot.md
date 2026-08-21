@@ -3,10 +3,7 @@
 ```
 nobody
 
-
-
 ```
-
 
 ## Passwords:
 ```

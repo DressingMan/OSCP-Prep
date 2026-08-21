@@ -1,132 +1,13 @@
 ## NMAP 
 
 ```bash
-# Nmap 7.94SVN scan initiated Tue Jul 16 15:01:21 2024 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.090s latency).
 Scanned at 2024-07-16 15:01:22 EDT for 41s
-
-Bug in http-security-headers: no string output.
-PORT   STATE SERVICE REASON         VERSION
-80/tcp open  http    syn-ack ttl 61 Apache httpd 2.4.41 ((Ubuntu))
-| http-referer-checker: 
-| Spidering limited to: maxpagecount=30
-|   https://cdnjs.cloudflare.com:443/ajax/libs/popper.js/1.13.0/umd/popper.min.js
-|_  https://cdnjs.cloudflare.com:443/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js
-| http-headers: 
-|   Date: Tue, 16 Jul 2024 19:01:32 GMT
-|   Server: Apache/2.4.41 (Ubuntu)
-|   Connection: close
-|   Content-Type: text/html; charset=UTF-8
-|   
-|_  (Request type: HEAD)
-|_http-dombased-xss: Couldn't find any DOM based XSS.
-|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
-|_http-feed: Couldn't find any feeds.
-| http-fileupload-exploiter: 
-|   
-|     Couldn't find a file-type field.
-|   
-|     Failed to upload and execute a payload.
-|   
-|     Failed to upload and execute a payload.
-|   
-|     Couldn't find a file-type field.
-|   
-|_    Failed to upload and execute a payload.
-| http-vhosts: 
-|_128 names had status 200
-|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
-|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
-|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+PORT      STATE SERVICE        VERSION
+80/tcp open http Apache httpd 2.4.41 ((Ubuntu))
 |_http-title: Zipper
-| http-csrf: 
-| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=TARGET
-|   Found the following possible CSRF vulnerabilities: 
-|     
-|     Path: http://TARGET:80/
-|     Form id: 
-|     Form action: 
-|     
-|     Path: http://TARGET:80/index.php?file=home
-|     Form id: 
-|_    Form action: 
-|_http-date: Tue, 16 Jul 2024 19:01:28 GMT; -1s from local time.
-| http-sitemap-generator: 
-|   Directory structure:
-|     /
-|       Other: 1; css: 1; php: 1
-|   Longest directory structure:
-|     Depth: 0
-|     Dir: /
-|   Total files found (by extension):
-|_    Other: 1; css: 1; php: 1
-| http-useragent-tester: 
-|   Status for browser useragent: 200
-|   Allowed User Agents: 
-|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
-|     libwww
-|     lwp-trivial
-|     libcurl-agent/1.0
-|     PHP/
-|     Python-urllib/2.5
-|     GT::WWW
-|     Snoopy
-|     MFC_Tear_Sample
-|     HTTP::Lite
-|     PHPCrawl
-|     URI::Fetch
-|     Zend_Http_Client
-|     http client
-|     PECL::HTTP
-|     Wget/1.13.4 (linux-gnu)
-|_    WWW-Mechanize/1.34
-|_http-fetch: Please enter the complete path of the directory to save data in.
-| http-comments-displayer: 
-| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=TARGET
-|     
-|     Path: http://TARGET:80/index.php?file=home
-|     Line number: 71
-|     Comment: 
-|         <!-- /.container -->
-|     
-|     Path: http://TARGET:80/style.css
-|     Line number: 1
-|     Comment: 
-|         /* Move down content because we have a fixed navbar that is 3.5rem tall */
-|     
-|     Path: http://TARGET:80/index.php?file=home
-|     Line number: 36
-|     Comment: 
-|         <!-- Main jumbotron for a primary marketing message or call to action -->
-|     
-|     Path: http://TARGET:80/index.php?file=home
-|     Line number: 72
-|     Comment: 
-|         <!-- partial -->
-|     
-|     Path: http://TARGET:80/index.php?file=home
-|     Line number: 13
-|     Comment: 
-|_        <!-- partial:index.partial.html -->
-|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
-|_http-chrono: Request times for /; avg: 293.38ms; min: 252.51ms; max: 367.23ms
-|_http-malware-host: Host appears to be clean
-|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
-|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
-| http-php-version: Logo query returned unknown hash 06b472e4a75b47a1d707d710a8d7b687
-|_Credits query returned unknown hash 06b472e4a75b47a1d707d710a8d7b687
-| http-methods: 
-|_  Supported Methods: GET HEAD POST OPTIONS
-|_http-mobileversion-checker: No mobile version detected.
-|_http-errors: Couldn't find any error pages.
-|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
-|_http-server-header: Apache/2.4.41 (Ubuntu)
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Tue Jul 16 15:02:03 2024 -- 1 IP address (1 host up) scanned in 42.43 seconds
-
 ```
 
 ## CURL 
@@ -202,7 +83,6 @@ Content-Type: text/html; charset=UTF-8
 		</div>
   </div>
 
-
 </div>
 
 <div class="container">
@@ -215,7 +95,6 @@ Content-Type: text/html; charset=UTF-8
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js'></script>
 </body>
 </html>
-
 
 ```
 
@@ -307,7 +186,6 @@ Detected Plugins:
 [ HTML5 ]
 	HTML version 5, detected by the doctype declaration
 
-
 [ HTTPServer ]
 	HTTP server header string. This plugin also attempts to
 	identify the operating system from the server header.
@@ -319,7 +197,6 @@ Detected Plugins:
 	This plugin detects instances of script HTML elements and
 	returns the script language/type.
 
-
 HTTP Headers:
 	HTTP/1.1 200 OK
 	Date: Tue, 16 Jul 2024 19:01:26 GMT
@@ -330,8 +207,6 @@ HTTP Headers:
 	Connection: close
 	Content-Type: text/html; charset=UTF-8
 
-
-
 ```
 ## Screenshot 
 
@@ -340,7 +215,6 @@ HTTP Headers:
 when you click on home a parameter appears 
 
 ![Pasted image 20240716152317.png](Evidence/Pasted%20image%2020240716152317.png)
-
 
 ```
 php://filter/convert.base64-encode/resource=index

@@ -1,141 +1,14 @@
 ## NMAP 
 
 ```
-# Nmap 7.94SVN scan initiated Wed Jun 19 22:52:53 2024 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.061s latency).
 Scanned at 2024-06-19 22:52:53 EDT for 29s
-
-Bug in http-security-headers: no string output.
-PORT   STATE SERVICE REASON         VERSION
-80/tcp open  http    syn-ack ttl 61 Apache httpd 2.4.41
-|_http-server-header: Apache/2.4.41 (Ubuntu)
-| http-grep: 
-|   (1) http://TARGET:80/: 
-|     (1) ip: 
-|       + TARGET
-|   (5) http://TARGET:80/grav-admin/: 
-|     (5) ip: 
-|       + 5.1.87.66
-|       + 7.74.96.9
-|       + 3.65.02.05
-|       + 04.1.07.14
-|_      + 07.1.13.14
-|_http-comments-displayer: Couldn't find any comments.
-| http-sitemap-generator: 
-|   Directory structure:
-|     /
-|       Other: 1
-|     /grav-admin/
-|       Other: 2
-|     /icons/
-|       gif: 2
-|   Longest directory structure:
-|     Depth: 1
-|     Dir: /grav-admin/
-|   Total files found (by extension):
-|_    Other: 3; gif: 2
-|_http-jsonp-detection: Couldn't find any JSONP endpoints.
-|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
-| http-ls: Volume /
-| SIZE  TIME              FILENAME
-| -     2021-03-17 17:46  grav-admin/
-|_
-|_http-referer-checker: Couldn't find any cross-domain scripts.
-|_http-fetch: Please enter the complete path of the directory to save data in.
-| http-php-version: Logo query returned unknown hash ed1edca388359919e3da6869af09ba0f
-|_Credits query returned unknown hash ed1edca388359919e3da6869af09ba0f
-|_http-malware-host: Host appears to be clean
-| http-vhosts: 
-|_128 names had status 200
+PORT      STATE SERVICE        VERSION
+80/tcp open http Apache httpd 2.4.41
 |_http-title: Index of /
-|_http-date: Thu, 20 Jun 2024 02:53:07 GMT; -1s from local time.
-|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
-|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
-| http-headers: 
-|   Date: Thu, 20 Jun 2024 02:53:05 GMT
-|   Server: Apache/2.4.41 (Ubuntu)
-|   Connection: close
-|   Content-Type: text/html;charset=UTF-8
-|   
-|_  (Request type: HEAD)
-| http-methods: 
-|_  Supported Methods: HEAD GET POST OPTIONS
-|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
-|_http-errors: Couldn't find any error pages.
-|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
-| http-useragent-tester: 
-|   Status for browser useragent: 200
-|   Allowed User Agents: 
-|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
-|     libwww
-|     lwp-trivial
-|     libcurl-agent/1.0
-|     PHP/
-|     Python-urllib/2.5
-|     GT::WWW
-|     Snoopy
-|     MFC_Tear_Sample
-|     HTTP::Lite
-|     PHPCrawl
-|     URI::Fetch
-|     Zend_Http_Client
-|     http client
-|     PECL::HTTP
-|     Wget/1.13.4 (linux-gnu)
-|_    WWW-Mechanize/1.34
-|_http-dombased-xss: Couldn't find any DOM based XSS.
-|_http-csrf: Couldn't find any CSRF vulnerabilities.
-|_http-mobileversion-checker: No mobile version detected.
-| http-sql-injection: 
-|   Possible sqli for queries:
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DD%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DD%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DD%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DD%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DD%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=S%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=N%3BO%3DA%27%20OR%20sqlspider
-|     http://TARGET:80/?C=D%3BO%3DA%27%20OR%20sqlspider
-|_    http://TARGET:80/?C=M%3BO%3DA%27%20OR%20sqlspider
-|_http-chrono: Request times for /; avg: 313.12ms; min: 245.85ms; max: 411.77ms
-|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
-| http-enum: 
-|_  /: Root directory w/ listing on 'apache/2.4.41 (ubuntu)'
-|_http-feed: Couldn't find any feeds.
 Service Info: Host: 127.0.0.1
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Jun 19 22:53:22 2024 -- 1 IP address (1 host up) scanned in 28.99 seconds
-
 ```
 
 ## CURL 
@@ -163,7 +36,6 @@ Content-Type: text/html;charset=UTF-8
 </table>
 <address>Apache/2.4.41 (Ubuntu) Server at TARGET Port 80</address>
 </body></html>
-
 
 ```
 
@@ -247,8 +119,6 @@ Files ->
 
 ```
 
-
-
 ## Nikto
 
 ```
@@ -330,13 +200,10 @@ HTTP Headers:
 	Connection: close
 	Content-Type: text/html;charset=UTF-8
 
-
-
 ```
 ## Screenshot 
 
 ![Pasted image 20240619231531.png](Evidence/Pasted%20image%2020240619231531.png)
-
 
 ![Pasted image 20240619232058.png](Evidence/Pasted%20image%2020240619232058.png)
 

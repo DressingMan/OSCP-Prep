@@ -36,7 +36,6 @@ nc -nlvp 4444
 python3 49216.py
 ```
 
-
 ### References
 
 - https://www.exploit-db.com/exploits/49216

@@ -31,7 +31,6 @@ ln -s /root/secret enox.zip
 touch @enox.zip
 ```
 
-
 ### References
 
 - _(none)_

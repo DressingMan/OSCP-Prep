@@ -2,29 +2,17 @@
 ## NMAP
 
 ```
-# Nmap 7.94SVN scan initiated Mon Jul 15 15:25:30 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Mon Jul 15 15:25:30 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.061s latency).
 Scanned at 2024-07-15 15:25:32 EDT for 40s
-
-PORT    STATE SERVICE     REASON          VERSION
-139/tcp open  netbios-ssn syn-ack ttl 125 Microsoft Windows netbios-ssn
-|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+PORT      STATE SERVICE        VERSION
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
 Host script results:
-|_smb2-capabilities: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-|_smb-protocols: No dialects accepted. Something may be blocking the responses
 |_smb2-time: ERROR: Script execution failed (use -d to debug)
-|_smb-mbenum: ERROR: Script execution failed (use -d to debug)
-|_smb-print-text: false
-|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
 |_smb2-security-mode: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Mon Jul 15 15:26:12 2024 -- 1 IP address (1 host up) scanned in 43.11 seconds
-
 ```
 ## enum4linux 
 
@@ -175,15 +163,12 @@ Server type string: null
 
 Completed after 15.60 seconds
 
-
 ```
 
 ## nbtscan 
 
 ```
 Doing NBT name scan for addresses from TARGET
-
-
 
 ```
 
@@ -197,7 +182,6 @@ Anonymous login successful
 	---------       ----      -------
 Reconnecting with SMB1 for workgroup listing.
 Unable to connect with SMB1 -- no workgroup available
-
 
 ```
 

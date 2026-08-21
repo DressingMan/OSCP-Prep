@@ -30,7 +30,6 @@ find / -perm -u=s -type f 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-
 ### References
 
 - https://github.com/CsEnox/CVE-2021-21425/blob/main/exploit.py

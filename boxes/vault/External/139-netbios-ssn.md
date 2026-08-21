@@ -2,29 +2,17 @@
 ## NMAP
 
 ```
-# Nmap 7.94SVN scan initiated Sat Jul 27 19:19:39 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Sat Jul 27 19:19:39 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.061s latency).
 Scanned at 2024-07-27 19:19:40 EDT for 40s
-
-PORT    STATE SERVICE     REASON          VERSION
-139/tcp open  netbios-ssn syn-ack ttl 125 Microsoft Windows netbios-ssn
-|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+PORT      STATE SERVICE        VERSION
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
 Host script results:
-|_smb-protocols: No dialects accepted. Something may be blocking the responses
-|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
 |_smb2-security-mode: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-|_smb-print-text: false
 |_smb2-time: ERROR: Script execution failed (use -d to debug)
-|_smb-mbenum: ERROR: Script execution failed (use -d to debug)
-|_smb2-capabilities: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Sat Jul 27 19:20:20 2024 -- 1 IP address (1 host up) scanned in 40.78 seconds
-
 ```
 ## enum4linux 
 
@@ -125,15 +113,12 @@ Server type string: null
 
 Completed after 7.58 seconds
 
-
 ```
 
 ## nbtscan 
 
 ```
 Doing NBT name scan for addresses from TARGET
-
-
 
 ```
 
@@ -152,7 +137,6 @@ do_connect: Connection to TARGET failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND
 	SYSVOL          Disk      Logon server share
 Reconnecting with SMB1 for workgroup listing.
 Unable to connect with SMB1 -- no workgroup available
-
 
 ```
 

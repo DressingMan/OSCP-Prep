@@ -14,8 +14,6 @@ Location: http://TARGET/wp-admin/setup-config.php
 Content-Length: 0
 Content-Type: text/html; charset=UTF-8
 
-
-
 ```
 
 ## Gobuster
@@ -154,7 +152,6 @@ Detected Plugins:
 [ HTML5 ]
 	HTML version 5, detected by the doctype declaration
 
-
 [ HTTPServer ]
 	HTTP server header string. This plugin also attempts to
 	identify the operating system from the server header.
@@ -187,8 +184,6 @@ HTTP Headers:
 	Content-Length: 1048
 	Connection: close
 	Content-Type: text/html; charset=utf-8
-
-
 
 ```
 ## Screenshot 

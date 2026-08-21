@@ -1,5 +1,5 @@
 
 ```
-636/tcp   open  tcpwrapped    syn-ack ttl 125
+636/tcp open tcpwrapped
 ```
 

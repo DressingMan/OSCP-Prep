@@ -17,7 +17,6 @@ G.Goldberg
 
 ```
 
-
 ## Passwords:
 ```
 HotelCalifornia194!
@@ -43,7 +42,6 @@ fea5a148c14cf51590456b2102b29fac
 ```
 
 V.Vent : HotelCalifornia194!
-
 
 L.Livingstone : 19a3a7550ce8c505c2d46b5e39d6f808
 

@@ -2,29 +2,17 @@
 ## NMAP
 
 ```
-# Nmap 7.94SVN scan initiated Wed Jul 24 18:01:46 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/... -oX /home/kali/... TARGET
+# Nmap 7.94SVN scan initiated Wed Jul 24 18:01:46 2024 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" TARGET
 Nmap scan report for TARGET
 Host is up, received user-set (0.059s latency).
 Scanned at 2024-07-24 18:01:46 EDT for 41s
-
-PORT    STATE SERVICE     REASON          VERSION
-139/tcp open  netbios-ssn syn-ack ttl 125 Microsoft Windows netbios-ssn
-|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+PORT      STATE SERVICE        VERSION
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
 Host script results:
-|_smb-protocols: No dialects accepted. Something may be blocking the responses
-|_smb-print-text: false
 |_smb2-security-mode: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
 |_smb2-time: ERROR: Script execution failed (use -d to debug)
-|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-|_smb-mbenum: ERROR: Script execution failed (use -d to debug)
-|_smb2-capabilities: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
-
-Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Jul 24 18:02:27 2024 -- 1 IP address (1 host up) scanned in 40.67 seconds
-
 ```
 ## enum4linux 
 
@@ -118,7 +106,6 @@ Server type string: null
 
 Completed after 17.29 seconds
 
-
 ```
 
 ## nbtscan 
@@ -126,15 +113,12 @@ Completed after 17.29 seconds
 ```
 Doing NBT name scan for addresses from TARGET
 
-
-
 ```
 
 ## smbclient 
 
 ```
 session setup failed: NT_STATUS_ACCESS_DENIED
-
 
 ```
 

