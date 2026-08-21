@@ -2,8 +2,6 @@
 
 Personal pentest notes: a **repeatable box layout**, **port/tool cheatsheets**, and **sanitized practice writeups**.
 
-This is a workflow, not OffSec course material. Exam notes are not here.
-
 Lab IPs in **text** are `TARGET` (victim) and `ATTACKER` (Kali). Screenshots are original practice captures and may still show isolated lab addresses.
 
 ## What’s in the repo
