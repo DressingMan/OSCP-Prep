@@ -1,0 +1,5 @@
+
+```
+dnsenum megacorpone.com
+```
+

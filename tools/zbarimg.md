@@ -1,0 +1,5 @@
+
+```
+zbarimg decoded.png
+```
+

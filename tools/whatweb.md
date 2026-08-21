@@ -1,0 +1,5 @@
+
+```
+whatweb http://TARGET
+```
+

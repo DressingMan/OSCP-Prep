@@ -1,5 +1,95 @@
 # Tools
 
-Command snippets I actually used while practicing. Lab IPs are `TARGET` / `ATTACKER`.
+Command snippets from the Obsidian **Methodology/Tools** folder.
 
-These are memory aids, not full man pages. Pair with [`../methodology/`](../methodology/) for the wider workflow.
+Lab IPs in text are `TARGET` / `ATTACKER`.
+
+| Tool |
+| --- |
+| [7z](7z.md) |
+| [AS-REP-Roasting](AS-REP-Roasting.md) |
+| [Bloodhound](Bloodhound.md) |
+| [Certutil](Certutil.md) |
+| [Chisel](Chisel.md) |
+| [Droopescan](Droopescan.md) |
+| [Evil-Winrm](Evil-Winrm.md) |
+| [Hashcat](Hashcat.md) |
+| [Impacket-secretsdump](Impacket-secretsdump.md) |
+| [John](John.md) |
+| [Kerberoasting](Kerberoasting.md) |
+| [LDAPsearch](LDAPsearch.md) |
+| [Mimikatz](Mimikatz.md) |
+| [Netexec](Netexec.md) |
+| [PrintSpoofer](PrintSpoofer.md) |
+| [Psexec-UAC-bypass](Psexec-UAC-bypass.md) |
+| [RPCclient](RPCclient.md) |
+| [Responder](Responder.md) |
+| [Rubeus](Rubeus.md) |
+| [Tar](Tar.md) |
+| [accesschk](accesschk.md) |
+| [cadaver](cadaver.md) |
+| [commix](commix.md) |
+| [crackmapexec](crackmapexec.md) |
+| [crunch](crunch.md) |
+| [curl](curl.md) |
+| [dir](dir.md) |
+| [dirsearch](dirsearch.md) |
+| [dnsenum](dnsenum.md) |
+| [dnsrecon](dnsrecon.md) |
+| [enum4linux](enum4linux.md) |
+| [exiftool](exiftool.md) |
+| [feroxbuster](feroxbuster.md) |
+| [ffuf](ffuf.md) |
+| [ftp](ftp.md) |
+| [git-dumper](git-dumper.md) |
+| [git](git.md) |
+| [gobuster](gobuster.md) |
+| [host](host.md) |
+| [hydra](hydra.md) |
+| [impacket-GetST](impacket-GetST.md) |
+| [impacket-addcomputer](impacket-addcomputer.md) |
+| [impacket-mssqlclient](impacket-mssqlclient.md) |
+| [impacket-smbserver](impacket-smbserver.md) |
+| [impacket-wmiexec](impacket-wmiexec.md) |
+| [iwr](iwr.md) |
+| [kerbrute](kerbrute.md) |
+| [ligolo-ng](ligolo-ng.md) |
+| [msfconsole](msfconsole.md) |
+| [msfvenom](msfvenom.md) |
+| [mysql](mysql.md) |
+| [nbtscan](nbtscan.md) |
+| [netcat](netcat.md) |
+| [netdiscover](netdiscover.md) |
+| [nikto](nikto.md) |
+| [nmap](nmap.md) |
+| [nslookup](nslookup.md) |
+| [ntlmrelayx](ntlmrelayx.md) |
+| [onesixtyone](onesixtyone.md) |
+| [openssl](openssl.md) |
+| [powershell](powershell.md) |
+| [proxychains](proxychains.md) |
+| [python](python.md) |
+| [rdesktop](rdesktop.md) |
+| [runas](runas.md) |
+| [schtasks](schtasks.md) |
+| [scp](scp.md) |
+| [searchsploit](searchsploit.md) |
+| [smbclient](smbclient.md) |
+| [smtp-user-enum](smtp-user-enum.md) |
+| [snmpwalk](snmpwalk.md) |
+| [socat](socat.md) |
+| [sqlmap](sqlmap.md) |
+| [ssh](ssh.md) |
+| [strings](strings.md) |
+| [tcpdump](tcpdump.md) |
+| [theHarvester](theHarvester.md) |
+| [unzip](unzip.md) |
+| [wfuzz](wfuzz.md) |
+| [wget](wget.md) |
+| [whatweb](whatweb.md) |
+| [whois](whois.md) |
+| [winPEAS](winPEAS.md) |
+| [wpscan](wpscan.md) |
+| [wsgidav](wsgidav.md) |
+| [xFreerdp](xFreerdp.md) |
+| [zbarimg](zbarimg.md) |

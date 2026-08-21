@@ -86,7 +86,8 @@ PORT   STATE SERVICE REASON         VERSION
 |   (1) http://TARGET:80/cache/include/javascript/: 
 |     (1) ip: 
 |_      + TARGET
-|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+
+_Trimmed verbose nmap/http-script dump; open ports and versions kept._
 | http-useragent-tester: 
 |   Status for browser useragent: 200
 |   Redirected To: index.php?action=Login&module=Users
@@ -108,9 +109,6 @@ PORT   STATE SERVICE REASON         VERSION
 |     PECL::HTTP
 |     Wget/1.13.4 (linux-gnu)
 |_    WWW-Mechanize/1.34
-|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
-|_http-chrono: Request times for /; avg: 1910.66ms; min: 544.84ms; max: 5416.42ms
-|_http-feed: Couldn't find any feeds.
 | http-enum: 
 |   /robots.txt: Robots file
 |   /crossdomain.xml: Adobe Flash crossdomain policy
@@ -139,7 +137,6 @@ PORT   STATE SERVICE REASON         VERSION
 |   url                                  method
 |   http://TARGET:80/           FORM
 |_  http://TARGET:80/index.php  FORM
-|_http-errors: Couldn't find any error pages.
 | http-sitemap-generator: 
 |   Directory structure:
 |     /
@@ -167,7 +164,6 @@ PORT   STATE SERVICE REASON         VERSION
 |     Dir: /themes/SuiteP/css/
 |   Total files found (by extension):
 |_    Other: 2; css: 6; ico: 1; js: 8; php: 1; png: 1
-|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
 | http-comments-displayer: 
 | Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=TARGET
 |     
@@ -178,5 +174,234 @@ PORT   STATE SERVICE REASON         VERSION
 |         			 * Whether or not this is a hidden filter.
 |         			 * @instance
 |         			 * @type {boolean}
+|         			 */
+|     
+|     Path: http://TARGET:80/index.php
+|     Line number: 205
+|     Comment: 
+|          // fix for campaign wizard
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 4697
+|     Comment: 
+|         /**
+|         			 * The destroy.ft.sorting event is raised before its UI is removed.
+|         			 * Calling preventDefault on this event will prevent the component from being destroyed.
+|         			 * @event FooTable.Sorting#"destroy.ft.sorting"
+|         			 * @param {jQuery.Event} e - The jQuery.Event object for the event.
+|         			 * @param {FooTable.Table} ft - The instance of the plugin raising the event.
+|         			 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 4469
+|     Comment: 
+|         /**
+|         	 * Whether or not the column can be used during filtering. Added by the {@link FooTable.Filtering} component.
+|         	 * @type {boolean}
+|         	 * @default true
+|         	 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 3625
+|     Comment: 
+|         /**
+|         			 * The delay in milliseconds before the query is auto applied after a change.
+|         			 * @instance
+|         			 * @type {number}
+|         			 */
+|     
+|     Path: http://TARGET:80/themes/SuiteP/css/normalize.css
+|     Line number: 69
+|     Comment: 
+|         /* 1 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 6549
+|     Comment: 
+|         /**
+|         	 * Updates a row in the underlying {@link FooTable.Rows#all} array.
+|         	 * @param {(number|FooTable.Row)} indexOrRow - The index to update or the actual {@link FooTable.Row} object.
+|         	 * @param {object} data - A hash containing the new row values.
+|         	 * @param {boolean} [redraw=true] - Whether or not to redraw the table, defaults to true but for bulk operations this
+|         	 * can be set to false and then followed by a call to the {@link FooTable.Table#draw} method.
+|         	 */
+|     
+|     Path: http://TARGET:80/index.php
+|     Line number: 160
+|     Comment: 
+|         /**
+|            * Password reset screen validation
+|            */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 684
+|     Comment: 
+|         /**
+|         	 * Escapes a string for use in a regular expression.
+|         	 * @memberof FooTable.str
+|         	 * @function escapeRegExp
+|         	 * @param {string} str - The string to escape.
+|         	 * @returns {string}
+|         	 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 5864
+|     Comment: 
+|         /**
+|         			 * The text that appears in the view button. This can contain HTML.
+|         			 * @type {string}
+|         			 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 1026
+|     Comment: 
+|         /**
+|         		 * The cell class containing all the properties for cells.
+|         		 * @constructs
+|         		 * @extends FooTable.Class
+|         		 * @param {FooTable.Table} table -  The root {@link FooTable.Table} this cell belongs to.
+|         		 * @param {FooTable.Row} row - The parent {@link FooTable.Row} this cell belongs to.
+|         		 * @param {FooTable.Column} column - The {@link FooTable.Column} this cell falls under.
+|         		 * @param {(*|HTMLElement|jQuery)} valueOrElement - Either the value or the element for the cell.
+|         		 * @returns {FooTable.Cell}
+|         		 * @this FooTable.Cell
+|         		 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 7299
+|     Comment: 
+|          //look for all subnavs and set them up
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 6691
+|     Comment: 
+|         /**
+|         		 * Clears the state value for the specified key for this table.
+|         		 * @instance
+|         		 * @param {string} key - The key to clear the value for.
+|         		 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 4652
+|     Comment: 
+|         /**
+|         		 * Initializes the sorting component for the plugin using the supplied table and options.
+|         		 * @instance
+|         		 * @protected
+|         		 * @fires FooTable.Sorting#"init.ft.sorting"
+|         		 * @this FooTable.Sorting
+|         		 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 4397
+|     Comment: 
+|         /**
+|         		 * Parses a single part of a query into an object to use during matching.
+|         		 * @param {string} str - The string representation of the part.
+|         		 * @returns {{query: string, negate: boolean, phrase: boolean, exact: boolean}}
+|         		 * @private
+|         		 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 4902
+|     Comment: 
+|         /**
+|         	 * The direction to sort if the {@link FooTable.Column#sorted} property is set to true. Can be "ASC", "DESC" or NULL. Added by the {@link FooTable.Sorting} component.
+|         	 * @type {string}
+|         	 * @default null
+|         	 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 4305
+|     Comment: 
+|         /**
+|         		 * Matches this queries parts array against the supplied string.
+|         		 * @param {string} str - The string to test.
+|         		 * @param {boolean} def - The default value to return based on the operand.
+|         		 * @returns {boolean}
+|         		 * @private
+|         		 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 7633
+|     Comment: 
+|         /* End of File include/javascript/jquery/jquery.showLoading.js */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 1183
+|     Comment: 
+|         /**
+|         		 * Helper method to call this cell's column formatter function using the supplied value and any additional required parameters.
+|         		 * @instance
+|         		 * @protected
+|         		 * @param {*} value - The value to format.
+|         		 * @returns {(string|HTMLElement|jQuery)}
+|         		 * @see FooTable.Column#formatter
+|         		 * @this FooTable.Cell
+|         		 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 3318
+|     Comment: 
+|         /**
+|         			 * The preinit.ft.rows event is raised before any UI is created and provides the tables jQuery data object for additional options parsing.
+|         			 * Calling preventDefault on this event will disable the entire plugin.
+|         			 * @event FooTable.Rows#"preinit.ft.rows"
+|         			 * @param {jQuery.Event} e - The jQuery.Event object for the event.
+|         			 * @param {FooTable.Table} ft - The instance of the plugin raising the event.
+|         			 * @param {object} data - The jQuery data object of the table raising the event.
+|         			 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 500
+|     Comment: 
+|         /**
+|         	 * This is a simple check to determine if an object is a jQuery promise object. It simply checks the object has a "then" and "promise" function defined.
+|         	 * The promise object is created as an object literal inside of jQuery.Deferred.
+|         	 * It has no prototype, nor any other truly unique properties that could be used to distinguish it.
+|         	 * This method should be a little more accurate than the internal jQuery one that simply checks for a "promise" method.
+|         	 * @memberof FooTable.is
+|         	 * @function promise
+|         	 * @param {object} obj - The object to check.
+|         	 * @returns {boolean}
+|         	 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 6623
+|     Comment: 
+|         /**
+|         			 * Whether or not to allow the paging component to store it's state.
+|         			 * @type {boolean}
+|         			 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 3833
+|     Comment: 
+|         /**
+|         			 * The destroy.ft.filtering event is raised before its UI is removed.
+|         			 * Calling preventDefault on this event will prevent the component from being destroyed.
+|         			 * @event FooTable.Filtering#"destroy.ft.filtering"
+|         			 * @param {jQuery.Event} e - The jQuery.Event object for the event.
+|         			 * @param {FooTable.Table} ft - The instance of the plugin raising the event.
+|         			 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 1345
+|     Comment: 
+|         /**
+|         			 * The name of the column. This name must correspond to the property name of the JSON row data.
+|         			 * @type {string}
+|         			 * @default null
+|         			 */
+|     
+|     Path: http://TARGET:80/cache/include/javascript/sugar_grp1_jquery.js?v=WWrZLHR9Ay2yH7WcEIhRuA
+|     Line number: 1413
+|     Comment: 
+|         /**
+|         		 * Creates a cell for this column from the supplied {@link FooTable.Row} object. This allows different column types to return different types of cells.
+|         		 * @instance
+|         		 * @protected
+|         		 * @param {FooTable.Row} row - The row to create the cell from.
+|         
 
-_Trimmed: original note was a full nmap/http-script dump. Open ports, titles, and attack notes are above._
+_Trimmed for readability._

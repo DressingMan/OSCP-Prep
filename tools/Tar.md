@@ -14,3 +14,7 @@ This will extract it
 
 Then cat the file!
 
+```
+tar -xzf your_file.tar.gz
+```
+

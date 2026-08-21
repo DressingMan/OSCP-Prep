@@ -1,0 +1,25 @@
+
+```
+accesschk.exe -uwqs Users c:*.*
+```
+
+```
+accesschk.exe -uwqs "Authenticated Users" c:*.*
+```
+
+```
+accesschk.exe /accepteula (always do this first!!!!!)
+```
+
+```
+accesschk.exe -ucqv [service_name] (requires sysinternals accesschk!)
+```
+
+```
+accesschk.exe -uwcqv "Authenticated Users" * (won't yield anything on Win 8)
+```
+
+```
+accesschk.exe -ucqv [service_name]
+```
+

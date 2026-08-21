@@ -22,4 +22,7 @@ setuserinfo
 sc query {service_name}
 ```
 
+```
+rpcclient -U nagoya-industries.com/svc_helpdesk TARGET
+```
 

