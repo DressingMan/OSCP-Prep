@@ -98,6 +98,10 @@ boxes/<machine-name>/
 
 Sublime for config/scripts, Obsidian for the vault and screenshots: **[setup/sublime-and-obsidian.md](setup/sublime-and-obsidian.md)**.
 
+## License
+
+[MIT](LICENSE) © 2026 PassTh3H4sh
+
 ## Disclaimer
 
 For education and authorized testing only. Do not use these techniques against systems you do not own or do not have permission to test.
