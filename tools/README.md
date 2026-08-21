@@ -1,6 +1,6 @@
 # Tools
 
-Command snippets from the Obsidian **Methodology/Tools** folder.
+Command snippets I used while practicing.
 
 Lab IPs in text are `TARGET` / `ATTACKER`.
 

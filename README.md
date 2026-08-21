@@ -11,45 +11,45 @@ Lab IPs in **text** are replaced with `TARGET` (victim) and `ATTACKER` (Kali). S
 | Path | What |
 | --- | --- |
 | [templates/](templates/) | Box skeleton + per-port templates |
-| [tools/](tools/) | Command cheatsheets (from Obsidian Tools) |
+| [tools/](tools/) | Command cheatsheets |
 | [methodology/](methodology/) | Enumeration, priv-esc, AD, shells, file transfer |
-| [boxes/](boxes/) | Practice boxes with the Obsidian folder layout |
+| [boxes/](boxes/) | Practice boxes |
 
 ## Boxes
 
-- [Crane](boxes/crane/) — TJ Nulls (Vault 1)
-- [Flu](boxes/flu/) — TJ Nulls (Vault 1)
-- [PC](boxes/pc/) — TJ Nulls (Vault 1)
-- [Pelican](boxes/pelican/) — TJ Nulls (Vault 1)
-- [Press](boxes/press/) — TJ Nulls (Vault 1)
-- [law](boxes/law/) — TJ Nulls (Vault 1)
-- [Access](boxes/access/) — Retired vault
-- [Algernon](boxes/algernon/) — Retired vault
-- [Astronaut](boxes/astronaut/) — Retired vault
-- [Blackgate](boxes/blackgate/) — Retired vault
-- [Boolean](boxes/boolean/) — Retired vault
-- [CVE-2023-46818](boxes/cve-2023-46818/) — Retired vault
-- [Clue](boxes/clue/) — Retired vault
-- [Exghost](boxes/exghost/) — Retired vault
-- [Explorer](boxes/explorer/) — Retired vault
-- [Fail](boxes/fail/) — Retired vault
-- [HUB](boxes/hub/) — Retired vault
-- [Ha-natraj](boxes/ha-natraj/) — Retired vault
-- [Heist](boxes/heist/) — Retired vault
-- [HelpDesk](boxes/helpdesk/) — Retired vault
-- [Hutch (LDAP)](boxes/hutch-ldap/) — Retired vault
-- [Jacko](boxes/jacko/) — Retired vault
-- [Plum](boxes/plum/) — Retired vault
-- [PyLoader](boxes/pyloader/) — Retired vault
-- [Resourced](boxes/resourced/) — Retired vault
-- [RubyDome](boxes/rubydome/) — Retired vault
-- [Shenzi](boxes/shenzi/) — Retired vault
-- [Squid](boxes/squid/) — Retired vault
-- [Twiggy](boxes/twiggy/) — Retired vault
-- [Vault](boxes/vault/) — Retired vault
-- [Zipper](boxes/zipper/) — Retired vault
+- [Crane](boxes/crane/)
+- [Flu](boxes/flu/)
+- [PC](boxes/pc/)
+- [Pelican](boxes/pelican/)
+- [Press](boxes/press/)
+- [law](boxes/law/)
+- [Access](boxes/access/)
+- [Algernon](boxes/algernon/)
+- [Astronaut](boxes/astronaut/)
+- [Blackgate](boxes/blackgate/)
+- [Boolean](boxes/boolean/)
+- [CVE-2023-46818](boxes/cve-2023-46818/)
+- [Clue](boxes/clue/)
+- [Exghost](boxes/exghost/)
+- [Explorer](boxes/explorer/)
+- [Fail](boxes/fail/)
+- [HUB](boxes/hub/)
+- [Ha-natraj](boxes/ha-natraj/)
+- [Heist](boxes/heist/)
+- [HelpDesk](boxes/helpdesk/)
+- [Hutch (LDAP)](boxes/hutch-ldap/)
+- [Jacko](boxes/jacko/)
+- [Plum](boxes/plum/)
+- [PyLoader](boxes/pyloader/)
+- [Resourced](boxes/resourced/)
+- [RubyDome](boxes/rubydome/)
+- [Shenzi](boxes/shenzi/)
+- [Squid](boxes/squid/)
+- [Twiggy](boxes/twiggy/)
+- [Vault](boxes/vault/)
+- [Zipper](boxes/zipper/)
 
-Each box has a **README guide** plus the same tree used in Obsidian:
+Each box has a **README guide** plus this tree:
 
 ```
 General-Info.md
